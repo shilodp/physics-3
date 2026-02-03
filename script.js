@@ -60,12 +60,14 @@ function setPosition(elem, position) {
 function setOptions() {
     let correctAnswer = girlSpeed;
     options = [correctAnswer];
-    for (let i = 0; i < 3; i++) {
-        options.push(
-            Math.round(
-                (Math.round(Math.random()) + Math.random()) * correctAnswer,
-            ),
+    while (options.length < 4) {
+        let value = Math.round(
+            (Math.round(Math.random()) + Math.random()) * correctAnswer,
         );
+        if (!value) continue;
+        if (!options.includes(value)) {
+            options.push(value);
+        }
     }
     options.sort(() => Math.random() - 0.5);
     fillValues();
