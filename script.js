@@ -83,7 +83,7 @@ function setTask() {
 }
 
 function fillValues() {
-    let result = `<legend>С какой скоростью нужно ему ехать?</legend>`;
+    let result = `<legend>С какой скоростью ей нужно ехать?</legend>`;
     for (let i = 0; i < options.length; i++) {
         result += `<label><input type="radio" name="option" value="${options[i]}">${options[i]} м/c.</label>`;
     }
