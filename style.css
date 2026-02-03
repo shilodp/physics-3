@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+#road {
+    position: relative;
+    height: 150px;
+}
+
+#message {
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+    height: 100px;
+}
+
+#message h1 {
+    margin: 0;
+}
+
+#line {
+    position: absolute;
+    bottom: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    left: 50px;
+    right: 50px;
+    border-radius: 10px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 15px);
+    right: 0;
+    transform: translateX(50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(12.5px, -50%);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    z-index: 30;
+    background-color: green;
+}
+
+#finish {
+    right: 0;
+}
+
+#finish::before {
+    background-image: url("finish.webp");
+}
+
+#finish::after {
+    background-color: red;
+}
+
+#girl::before {
+    background-image: url("girl.png");
+}
+
+#girl::after {
+    background-color: rgb(188, 97, 112);
+}
+
+#boy {
+    left: 0;
+}
+
+#boy::before {
+    background-image: url("boy.png");
+}
+
+#boy::after {
+    background-color: blue;
+}
+
+#boy::before {
+    background-image: url("boy.png");
+}
+
+#boy::after {
+    background-color: blue;
+}
+
+#girl.active,
+#boy.active {
+    left: 100% !important;
+    transition-property: left;
+    transition-timing-function: linear;
+}
+
+#buttons {
+    padding: 30px;
+}
+
+#task {
+    color: rgb(90, 88, 88);
+}
+
+#task .value {
+    color: black;
+}
+
+#options label {
+    display: block;
+    font-size: 18px;
+}
+
+#actions {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+#actions button {
+    cursor: pointer;
+    height: 50px;
+    border-radius: 15px;
+    border-width: 1px;
+    min-width: 150px;
+    font-size: 20px;
+}
+
+@media (prefers-dark-interface) {
+    body {
+        color: white;
+        background: #242222;
+    }
+    #filler {
+        background: dodgerblue;
+    }
+    #task .value {
+        color: white;
+    }
+}

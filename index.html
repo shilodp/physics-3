@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Физика</title>
+        <script defer src="script.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="game">
+            <div id="message"></div>
+            <div id="road">
+                <div id="line">
+                    <div id="marks">
+                        <div id="boy" class="icon"></div>
+                        <div id="girl" class="icon"></div>
+                        <div id="finish" class="icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="buttons">
+                <form action="#" id="game" novalidate>
+                    <h2 id="task"></h2>
+                    <fieldset id="options"></fieldset>
+                    <div id="actions">
+                        <button id="submit" type="button">
+                            <i class="fa fa-light fa-circle-check"></i> Ответить
+                        </button>
+                        <button id="reset" type="button">
+                            <i class="fa fa-refresh"></i> Попробовать ещё раз
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
